@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
+        <link href="cssPermisos.css" rel="stylesheet" type="text/css"/>
+        <script>
+            var r,w,x;
+            $(document).ready(function(){
+                r=parseInt($("#r").val());
+                w=parseInt($("#w").val());
+                x=parseInt($("#x").val());
+            });
+            
+            function sumaPesos(){
+               if($("#r").prop("checked")){
+                   $("#res").val(r);
+               }else{
+                   if($("#w").prop("checked")){
+                       $("#res").val(w);
+                   }else{
+                       if($("#x").prop("checked")){
+                           $("#res").val(x);
+                       }
+                   }
+                }
+                if($("#r").prop("checked")&&$("#w").prop("checked")){
+                    $("#res").val(r+w);
+                }else{
+                    if($("#r").prop("checked")&&$("#x").prop("checked")){
+                        $("#res").val(r+x);
+                    }else{
+                        if($("#w").prop("checked")&&$("#x").prop("checked")){
+                            $("#res").val(w+x);
+                        }
+                    }
+                }
+                if($("#w").prop("checked")&&$("#x").prop("checked")&&$("#r").prop("checked")){
+                    $("#res").val(w+x+r);
+                }
+                if(!$("#w").prop("checked")&&!$("#x").prop("checked")&&!$("#r").prop("checked")){
+                    $("#res").val(0);
+                }
+           }
+            
+        </script>
+    </head>
+    <body>
+        <form id="permisos">
+            <table>
+                <tr>
+                    <td>Lectura(r)</td>
+                    <td>Escritura(w)</td>
+                    <td>Ejecución(x)</td>
+                </tr>
+                <tr id="chbxPermisos">
+                    <td><input type="checkbox" id="r" value="4" onclick="sumaPesos()"/></td>
+                    <td><input type="checkbox" id="w" value="2" onclick="sumaPesos()"/></td>
+                    <td><input type="checkbox" id="x" value="1" onclick="sumaPesos()"/></td>                    
+                </tr>
+                <tr>
+                    <td id="resultado" colspan="3">
+                        <input type="text" id="res" size="2"/>
+                    </td>
+                </tr>
+            </table>
+            
+        </form>
+    </body>
+</html>
