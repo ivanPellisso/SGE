@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        
+        <script>
+            //eval()
+            $(document).ready(function(){
+                $("#calc").load();
+            });
+            var num;
+            function pulsaNum(value){
+                $("#op").text(value);
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+        <br><br>
+        <div id="calc">
+            <div class="col-xs-6">
+                <input type="text" class="form-control" id="op">
+            </div><br><br>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="1" id="1" onclick="pulsaNum(1)">
+            </div>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="2" id="2" onclick="pulsaNum(2)">
+            </div>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="3" id="3" onclick="pulsaNum(3)">
+            </div><br><br>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="4" id="4" onclick="pulsaNum(4)">
+            </div>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="5" id="5" onclick="pulsaNum(5)">
+            </div>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="6" id="6" onclick="pulsaNum(6)">
+            </div><br><br>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="7" id="7" onclick="pulsaNum(7)">
+            </div>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="8" id="8" onclick="pulsaNum(8)">
+            </div>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="9" id="9" onclick="pulsaNum(9)">
+            </div><br><br>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="0" id="0" onclick="pulsaNum(0)">
+            </div>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="+" id="s" onclick="">
+            </div>
+            <div class="col-xs-2">
+                <input type="button" class="col-xs-12" value="-" id="r" onclick="">
+            </div><br>
+        </div>
+</html>
